@@ -1,0 +1,360 @@
+* {
+  box-sizing: border-box;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 20;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  height: 0;
+  padding: 0;
+  font-size: clamp(20px, 1.3vw, 1.3vw);
+}
+
+header h2 {
+  padding: 0;
+  color: #ffedce;
+  margin-left: 0;
+  margin-top: clamp(2.3vh, 1.5vw, 1.5vw);
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+header h1 {
+  font-family: "Euphoria Script", cursive;
+  font-weight: 600;
+  font-style: normal;
+  padding: 0;
+  font-size: 3em;
+  color: #ff9bbc;
+  margin-left: clamp(1.2vh, 1.2vw, 1.2vw);
+  margin-top: clamp(0.6vw, 0.6vh, 0.6vh);
+  margin-right: 0;
+  margin-bottom: 0;
+  position: abosolute;
+}
+
+.mode {
+  display: flex;
+  position: absolute;
+  margin-top: clamp(1em, 1.4%, 1.4%);
+  margin-right: clamp(0.3vw, 0.8%, 0.8%);
+  right: 0;
+}
+
+.letter {
+  margin: 0;
+  padding: 0;
+  width: clamp(30px, 2.3%, 2.3%);
+  position: absolute;
+  margin-left: clamp(2vh, 2vw, 2vw);
+  margin-top: clamp(1.6vw, 1.6vh, 1.6vh);
+}
+
+.index {
+  background:  linear-gradient(to top, #a072b3 1%, #444D86 20%, #1E112C 60%);
+  background-attachment: relative;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.leaves {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  height: 40%;
+  z-index: 1; 
+}
+
+.clouds {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  display: flex; 
+  z-index: 0;   
+  opacity: 30%;
+  height: 70%;
+}
+
+.main {
+  position: relative;
+  padding: 5%;
+  height: 100vh;
+  width: 100vw;
+  display: flex;       
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.welcome {
+  background: linear-gradient(rgb(255, 187, 215), #f178a6)rgb(241, 120, 166);
+  height: 25vw;
+  width: 40vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4% / 7%;
+  border: 1px solid white;
+}
+
+.constellation {
+  position: absolute; 
+  top: 30%; 
+  left: 20%; 
+  width: clamp(90px, 4%, 4%);
+  animation: rotate 4s linear infinite;
+}
+
+@keyframes rotate {
+  0% { 
+    opacity: 0.1;
+    transform: rotate(0deg) scale(1);
+  }
+  20% {
+    opacity: 1;
+    transform: rotate(72deg) scale(1);
+  }
+  40% {
+    opacity: 0.1;
+    transform: rotate(144deg) scale(1);
+  }
+  60% {
+    opacity: 1;
+    transform: rotate(216deg) scale(1.2);
+  }
+  80% {
+    opacity: 0.1;
+    transform: rotate(288deg) scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+/* @media only screen and (max-width: 900px) {
+  .welcome {
+    height: 35vh;
+    width: 70vw;
+  }
+} */
+
+
+/* -------- AGREGADO -------- */
+
+/* capa 4 (estrellas fugaces) */
+@keyframes animateBg {
+    0%
+    {
+    opacity: 0;
+    }
+    1%,100%
+    {
+        transform:scale(1);
+    }
+    50%
+    {
+        transform:scale(1.2);
+    }
+}
+
+span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1), 0 0 0 8px rgba(255, 255, 255, 0.1), 0 0 20px rgba(255, 255, 255, 1)  ;
+    animation:  animate 5s linear infinite;
+    animation-fill-mode: backwards;
+}
+
+span::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px;
+    height: 1px;
+    background: linear-gradient(90deg, #fff, transparent);
+}
+
+@keyframes animate {
+    0%
+    {
+        opacity: 0;
+    }
+    1%
+    {
+        transform: rotate(315deg) translateX(0);
+        opacity: 1;
+    }
+    70%
+    {
+        opacity: 1;
+
+    }
+    100%
+    {
+        transform: rotate(315deg) translateX(-1500px);
+        opacity: 0;
+
+    }
+    
+}
+
+span:nth-child(1){
+    top: 0;
+    right: 0;
+    left:initial;
+    animation-delay: 5s ;
+    animation-duration: 1s;
+}
+
+span:nth-child(2){
+    top: 0;
+    right: 80px;
+    left:initial;
+    animation-delay:10s;
+    animation-duration: 3s;
+}
+
+span:nth-child(3){
+    top: 80px;
+    right: 0px;
+    left:initial;
+    animation-delay:15s ;
+    animation-duration: 2s;
+}
+
+span:nth-child(4){
+    top: 0;
+    right: 180px;
+    left:initial;
+    animation-delay:25s;
+    animation-duration: 1.5s;
+}
+
+span:nth-child(5){
+    top: 0;
+    right: 400px;
+    left:initial;
+    animation-delay:20s;
+    animation-duration: 2.5s;
+}
+
+span:nth-child(6){
+    top: 0;
+    right: 600px;
+    left:initial;
+    animation-delay:30s ;
+    animation-duration: 3s;
+}
+span:nth-child(7 ){
+    top: 300px;
+    right: 0px;
+    left:initial;
+    animation-delay:50s ;
+    animation-duration: 1.75s;
+}
+
+span:nth-child(8){
+    top: 0px;
+    right: 700px;
+    left:initial;
+    animation-delay:45s ;
+    animation-duration: 1.25s;
+}
+
+span:nth-child(9){
+    top: 0px;
+    right: 1300px;
+    left:initial;
+    animation-delay:40s ;
+    animation-duration: 2.25s;
+}
+
+span:nth-child(10){
+    top: 0px;
+    right: 1000px;
+    left:initial;
+    animation-delay:35s ;
+    animation-duration: 2.25s;
+}
+    
+/* capa 1 (estrellas pequeñas) */
+#stars {
+  position: fixed; top: 0; left: 0;
+  width: 1px; height: 1px; background: transparent;
+  box-shadow:
+    25px 40px #FFF, 120px 300px #FFF, 240px 1800px #FFF, 380px 900px #FFF,
+    520px 150px #FFF, 760px 1200px #FFF, 980px 1700px #FFF, 1120px 600px #FFF,
+    1500px 1300px #FFF, 1800px 400px #FFF; 
+  animation: animStar 10000s linear infinite;
+}
+
+#stars::after {
+  content: "";
+  position: absolute;
+  top: 2000px; left: 0;
+  width: 1px; height: 1px; background: transparent;
+  box-shadow:
+    25px 40px #FFF, 120px 300px #FFF, 240px 1800px #FFF, 380px 900px #FFF,
+    520px 150px #FFF, 760px 1200px #FFF, 980px 1700px #FFF, 1120px 600px #FFF,
+    1500px 1300px #FFF, 1800px 400px #FFF;
+}
+
+/* capa 2 (medianas) */
+#stars2 {
+  position: fixed; top: 0; left: 0;
+  width: 2px; height: 2px; background: transparent;
+  box-shadow:
+    60px 100px #FFF, 300px 1600px #FFF, 800px 600px #FFF, 1300px 1400px #FFF,
+    1700px 300px #FFF;
+  animation: animStar 150s linear infinite;
+}
+
+#stars2::after {
+  content: "";
+  position: absolute;
+  top: 2000px; left: 0;
+  width: 2px; height: 2px; background: transparent;
+  box-shadow:
+    60px 100px #FFF, 300px 1600px #FFF, 800px 600px #FFF, 1300px 1400px #FFF,
+    1700px 300px #FFF;
+}
+
+/* capa 3 (grandes) */
+#stars3 {
+  position: fixed; top: 0; left: 0;
+  width: 3px; height: 3px; background: transparent;
+  box-shadow:
+    200px 1200px #FFF, 900px 200px #FFF, 1600px 1500px #FFF;
+  animation: animStar 200s linear infinite;
+}
+
+#stars3::after {
+  content: "";
+  position: absolute;
+  top: 2000px; left: 0;
+  width: 3px; height: 3px; background: transparent;
+  box-shadow:
+    200px 1200px #FFF, 900px 200px #FFF, 1600px 1500px #FFF;
+}
+
+@keyframes animStar {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-2000px); }
+}
