@@ -55,7 +55,7 @@ header h1 {
 }
 
 .index {
-  background:  linear-gradient(to top, #a072b3 1%, #444D86 20%, #1E112C 60%);
+  background:  linear-gradient(to top, #b882c5 0%, #78a2ca  12%, #444D86 35%, #35214d 70%, #1E112C 88%);
   background-attachment: relative;
   height: 100vh;
   margin: 0;
@@ -97,14 +97,47 @@ header h1 {
 }
 
 .welcome {
-  background: linear-gradient(rgb(255, 187, 215), #f178a6)rgb(241, 120, 166);
+  background: linear-gradient(#ff6c9d 5.8%, rgb(255, 187, 215) 5.8%, #f178a6);
   height: 25vw;
   width: 40vw;
-  display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 4% / 7%;
-  border: 1px solid white;
+  border: 2px solid rgba(255, 255, 255, 0.644);
+}
+
+.welcome h3{
+  color: rgb(255, 246, 250);
+  font-size: 1.5vw;
+}
+
+.welcome p{
+  color: rgb(29, 9, 20);
+  font-size-adjust: inherit;
+  font-size: clamp(17px, 17px, 17px);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;  
+  align-content: center;
+  align-items: center;
+  padding: 3%;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  height: 6%;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  border-bottom: 1px groove rgba(255, 57, 90, 0.185);
+}
+
+.tool {
+  height: 90%;
 }
 
 .constellation {
@@ -219,7 +252,7 @@ span:nth-child(1){
     top: 0;
     right: 0;
     left:initial;
-    animation-delay: 5s ;
+    animation-delay: 25s ;
     animation-duration: 1s;
 }
 
@@ -227,7 +260,7 @@ span:nth-child(2){
     top: 0;
     right: 80px;
     left:initial;
-    animation-delay:10s;
+    animation-delay:45s;
     animation-duration: 3s;
 }
 
@@ -235,7 +268,7 @@ span:nth-child(3){
     top: 80px;
     right: 0px;
     left:initial;
-    animation-delay:15s ;
+    animation-delay:30s ;
     animation-duration: 2s;
 }
 
@@ -243,8 +276,8 @@ span:nth-child(4){
     top: 0;
     right: 180px;
     left:initial;
-    animation-delay:25s;
-    animation-duration: 1.5s;
+    animation-delay:5s;
+    animation-duration: 1.7s;
 }
 
 span:nth-child(5){
@@ -259,7 +292,7 @@ span:nth-child(6){
     top: 0;
     right: 600px;
     left:initial;
-    animation-delay:30s ;
+    animation-delay:40s ;
     animation-duration: 3s;
 }
 span:nth-child(7 ){
@@ -274,7 +307,7 @@ span:nth-child(8){
     top: 0px;
     right: 700px;
     left:initial;
-    animation-delay:45s ;
+    animation-delay:12s ;
     animation-duration: 1.25s;
 }
 
@@ -282,7 +315,7 @@ span:nth-child(9){
     top: 0px;
     right: 1300px;
     left:initial;
-    animation-delay:40s ;
+    animation-delay:17s ;
     animation-duration: 2.25s;
 }
 
@@ -291,7 +324,7 @@ span:nth-child(10){
     right: 1000px;
     left:initial;
     animation-delay:35s ;
-    animation-duration: 2.25s;
+    animation-duration: 1.4s;
 }
     
 /* capa 1 (estrellas pequeñas) */
